@@ -27,5 +27,9 @@ pub fn test1() {
         from_reader(File::open(mdfilepath).unwrap()).unwrap()
    };
 
-    assert_eq!(make_acronym_formatting(input_json), gt_json);
+    let result = make_acronym_formatting(input_json);
+    
+    assert_eq!(&result.meta, &gt_json.meta);
+    assert_eq!(&result.blocks, &gt_json.blocks);
+    assert_eq!(result.pandoc_api_version[0], result.pandoc_api_version[0]);
 }
