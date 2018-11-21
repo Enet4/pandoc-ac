@@ -4,6 +4,7 @@ use pandoc::{self, OutputKind};
 use serde_json::from_reader;
 use std::fs::File;
 use tempfile::tempdir;
+use pretty_assertions::assert_eq;
 
 #[test]
 pub fn test1() {
