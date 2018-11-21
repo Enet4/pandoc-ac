@@ -1,0 +1,20 @@
+language: rust
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - pandoc
+
+rust:
+  - beta
+  - nightly
+
+script:
+  - cargo test
+
+env:
+matrix:
+  allow_failures:
+    - rust: nightly

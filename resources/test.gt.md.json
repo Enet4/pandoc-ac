@@ -1,0 +1,617 @@
+{
+    "meta": {},
+    "blocks": [
+      {
+        "t": "Header",
+        "c": [
+          1,
+          ["introduction-to-this-test", [], []],
+          [
+            { "t": "Str", "c": "Introduction" },
+            { "t": "Space" },
+            { "t": "Str", "c": "to" },
+            { "t": "Space" },
+            { "t": "Str", "c": "this" },
+            { "t": "Space" },
+            { "t": "Str", "c": "Test" }
+          ]
+        ]
+      },
+      {
+        "t": "Para",
+        "c": [
+          { "t": "Str", "c": "This" },
+          { "t": "Space" },
+          { "t": "Str", "c": "is" },
+          { "t": "Space" },
+          { "t": "Str", "c": "a" },
+          { "t": "Space" },
+          { "t": "Str", "c": "text" },
+          { "t": "Space" },
+          { "t": "Str", "c": "in" },
+          { "t": "Space" },
+          { "t": "Str", "c": "which" },
+          { "t": "Space" },
+          { "t": "Str", "c": "I" },
+          { "t": "Space" },
+          { "t": "Str", "c": "will" },
+          { "t": "Space" },
+          { "t": "Str", "c": "be" },
+          { "t": "Space" },
+          { "t": "Str", "c": "adding" },
+          { "t": "Space" },
+          { "t": "Str", "c": "multiple" },
+          { "t": "Space" },
+          { "t": "Str", "c": "acronyms" },
+          { "t": "Space" },
+          { "t": "Str", "c": "and" },
+          { "t": "Space" },
+          { "t": "Str", "c": "expect" },
+          { "t": "Space" },
+          { "t": "Str", "c": "it" },
+          { "t": "Space" },
+          { "t": "Str", "c": "to" },
+          { "t": "Space" },
+          { "t": "Str", "c": "work." },
+          { "t": "Space" },
+          { "t": "Str", "c": "Like" },
+          { "t": "Space" },
+          { "t": "RawInline", "c": ["tex", "\\acs{pacs}"] },
+          { "t": "Str", "c": "." },
+          { "t": "Space" },
+          { "t": "Str", "c": "Even" },
+          { "t": "Space" },
+          { "t": "RawInline", "c": ["tex", "\\acf{pacs}"] },
+          { "t": "Str", "c": "," },
+          { "t": "Space" },
+          { "t": "Str", "c": "and" },
+          { "t": "Space" },
+          { "t": "Str", "c": "maybe" },
+          { "t": "Space" },
+          { "t": "Str", "c": "even" },
+          { "t": "Space" },
+          { "t": "RawInline", "c": ["tex", "\\aclp{rbm}"] },
+          { "t": "Str", "c": "." }
+        ]
+      },
+      {
+        "t": "Para",
+        "c": [
+          { "t": "Str", "c": "How" },
+          { "t": "Space" },
+          { "t": "Str", "c": "it" },
+          { "t": "Space" },
+          { "t": "Str", "c": "works:" }
+        ]
+      },
+      {
+        "t": "BulletList",
+        "c": [
+          [
+            {
+              "t": "Plain",
+              "c": [
+                { "t": "Code", "c": [["", [], []], "(+x)"] },
+                { "t": "Str", "c": ":" },
+                { "t": "Space" },
+                { "t": "Str", "c": "basic" },
+                { "t": "Space" },
+                { "t": "Str", "c": "acronym" },
+                { "t": "Space" },
+                { "t": "Str", "c": "instruction," },
+                { "t": "Space" },
+                { "t": "Str", "c": "translates" },
+                { "t": "Space" },
+                { "t": "Str", "c": "to" },
+                { "t": "Space" },
+                { "t": "Code", "c": [["", [], []], "\\ac{x}"] },
+                { "t": "Str", "c": "." }
+              ]
+            }
+          ],
+          [
+            {
+              "t": "Plain",
+              "c": [
+                { "t": "Code", "c": [["", [], []], "(+~x)"] },
+                { "t": "Str", "c": ":" },
+                { "t": "Space" },
+                { "t": "Str", "c": "full" },
+                { "t": "Space" },
+                { "t": "Str", "c": "form" },
+                { "t": "Space" },
+                { "t": "Str", "c": "of" },
+                { "t": "Space" },
+                { "t": "Str", "c": "the" },
+                { "t": "Space" },
+                { "t": "Str", "c": "acronym," },
+                { "t": "Space" },
+                { "t": "Str", "c": "translates" },
+                { "t": "Space" },
+                { "t": "Str", "c": "to" },
+                { "t": "Space" },
+                { "t": "Code", "c": [["", [], []], "\\acf{x}"] },
+                { "t": "Str", "c": "." }
+              ]
+            }
+          ],
+          [
+            {
+              "t": "Plain",
+              "c": [
+                { "t": "Code", "c": [["", [], []], "(+-x)"] },
+                { "t": "Str", "c": ":" },
+                { "t": "Space" },
+                { "t": "Str", "c": "always" },
+                { "t": "Space" },
+                { "t": "Str", "c": "short" },
+                { "t": "Space" },
+                { "t": "Str", "c": "form," },
+                { "t": "Space" },
+                { "t": "Str", "c": "traslates" },
+                { "t": "Space" },
+                { "t": "Str", "c": "to" },
+                { "t": "Space" },
+                { "t": "Code", "c": [["", [], []], "\\acs{x}"] },
+                { "t": "Str", "c": "." }
+              ]
+            }
+          ],
+          [
+            {
+              "t": "Plain",
+              "c": [
+                { "t": "Code", "c": [["", [], []], "(+x)"] },
+                { "t": "Str", "c": ":" },
+                { "t": "Space" },
+                { "t": "Str", "c": "always" },
+                { "t": "Space" },
+                { "t": "Str", "c": "expand" },
+                { "t": "Space" },
+                { "t": "Str", "c": "acronym," },
+                { "t": "Space" },
+                { "t": "Str", "c": "traslates" },
+                { "t": "Space" },
+                { "t": "Str", "c": "to" },
+                { "t": "Space" },
+                { "t": "Code", "c": [["", [], []], "\\acs{x}"] },
+                { "t": "Str", "c": "." }
+              ]
+            }
+          ],
+          [
+            {
+              "t": "Plain",
+              "c": [
+                { "t": "Code", "c": [["", [], []], "(+*x)"] },
+                { "t": "Str", "c": "," },
+                { "t": "Space" },
+                { "t": "Code", "c": [["", [], []], "(+.*x)"] },
+                { "t": "Str", "c": "," },
+                { "t": "Space" },
+                { "t": "Code", "c": [["", [], []], "(+-*x)"] },
+                { "t": "Str", "c": "," },
+                { "t": "Space" },
+                { "t": "Code", "c": [["", [], []], "(+~*x)"] },
+                { "t": "Str", "c": ":" },
+                { "t": "Space" },
+                { "t": "Str", "c": "plural" },
+                { "t": "Space" },
+                { "t": "Str", "c": "form" },
+                { "t": "Space" },
+                { "t": "Str", "c": "of" },
+                { "t": "Space" },
+                { "t": "Str", "c": "the" },
+                { "t": "Space" },
+                { "t": "Str", "c": "above," },
+                { "t": "Space" },
+                { "t": "Str", "c": "translate" },
+                { "t": "Space" },
+                { "t": "Str", "c": "to" },
+                { "t": "Space" },
+                { "t": "Code", "c": [["", [], []], "\\acp{x}"] },
+                { "t": "Str", "c": "," },
+                { "t": "Space" },
+                { "t": "Code", "c": [["", [], []], "\\acsp{x}"] },
+                { "t": "Str", "c": "," },
+                { "t": "Space" },
+                { "t": "Code", "c": [["", [], []], "\\aclp{x}"] },
+                { "t": "Str", "c": "," },
+                { "t": "Space" },
+                { "t": "Code", "c": [["", [], []], "\\acfp{x}"] },
+                { "t": "Space" },
+                { "t": "Str", "c": "respectively." }
+              ]
+            }
+          ],
+          [
+            {
+              "t": "Plain",
+              "c": [
+                { "t": "Code", "c": [["", [], []], "(+^x)"] },
+                { "t": "Str", "c": "," },
+                { "t": "Space" },
+                { "t": "Code", "c": [["", [], []], "(+.^x)"] },
+                { "t": "Str", "c": "," },
+                { "t": "Space" },
+                { "t": "Code", "c": [["", [], []], "(+-^x)"] },
+                { "t": "Str", "c": "," },
+                { "t": "Space" },
+                { "t": "Code", "c": [["", [], []], "(+~^x)"] },
+                { "t": "Str", "c": ":" },
+                { "t": "Space" },
+                { "t": "Str", "c": "plural" },
+                { "t": "Space" },
+                { "t": "Str", "c": "form," },
+                { "t": "Space" },
+                { "t": "Str", "c": "same" },
+                { "t": "Space" },
+                { "t": "Str", "c": "thing" },
+                { "t": "Space" },
+                { "t": "Str", "c": "as" },
+                { "t": "Space" },
+                { "t": "Str", "c": "the" },
+                { "t": "Space" },
+                { "t": "Str", "c": "previous" },
+                { "t": "Space" },
+                { "t": "Str", "c": "point" }
+              ]
+            }
+          ]
+        ]
+      },
+      {
+        "t": "Para",
+        "c": [
+          { "t": "Str", "c": "The" },
+          { "t": "Space" },
+          { "t": "Str", "c": "stuff" },
+          { "t": "Space" },
+          { "t": "Str", "c": "in" },
+          { "t": "Space" },
+          { "t": "Str", "c": "monospace" },
+          { "t": "Space" },
+          { "t": "Str", "c": "formatting" },
+          { "t": "Space" },
+          { "t": "Str", "c": "should" },
+          { "t": "Space" },
+          { "t": "Str", "c": "not" },
+          { "t": "Space" },
+          { "t": "Str", "c": "be" },
+          { "t": "Space" },
+          { "t": "Str", "c": "touched." },
+          { "t": "Space" },
+          { "t": "Str", "c": "Not" },
+          { "t": "Space" },
+          { "t": "Str", "c": "even" },
+          { "t": "Space" },
+          { "t": "Str", "c": "things" },
+          { "t": "Space" },
+          { "t": "Str", "c": "in" },
+          { "t": "Space" },
+          { "t": "Str", "c": "equations:" },
+          { "t": "Space" },
+          { "t": "Code", "c": [["", [], []], "a (+b)"] },
+          { "t": "Space" },
+          { "t": "Math", "c": [{ "t": "InlineMath" }, "a (+b)"] },
+          { "t": "Space" },
+          { "t": "Str", "c": "or" },
+          { "t": "Space" },
+          { "t": "Math", "c": [{ "t": "DisplayMath" }, "c (+d)"] },
+          { "t": "Str", "c": "." }
+        ]
+      },
+      {
+        "t": "BulletList",
+        "c": [
+          [
+            {
+              "t": "Para",
+              "c": [
+                {
+                  "t": "Code",
+                  "c": [["", [], []], "(+cbir) is equal to \\ac{cbir}"]
+                }
+              ]
+            },
+            {
+              "t": "BulletList",
+              "c": [
+                [
+                  {
+                    "t": "Plain",
+                    "c": [
+                      { "t": "RawInline", "c": ["tex", "\\ac{cbir}"] },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "is" },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "equal" },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "to" },
+                      { "t": "Space" },
+                      { "t": "RawInline", "c": ["tex", "\\ac{cbir}"] }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "t": "Para",
+              "c": [
+                {
+                  "t": "Code",
+                  "c": [["", [], []], "(+cbir) is equal to \\ac{cbir}"]
+                }
+              ]
+            },
+            {
+              "t": "BulletList",
+              "c": [
+                [
+                  {
+                    "t": "Plain",
+                    "c": [
+                      { "t": "RawInline", "c": ["tex", "\\ac{cbir}"] },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "is" },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "equal" },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "to" },
+                      { "t": "Space" },
+                      { "t": "RawInline", "c": ["tex", "\\ac{cbir}"] }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "t": "Para",
+              "c": [
+                {
+                  "t": "Code",
+                  "c": [["", [], []], "(+~sdae) is equal to \\acf{sdae}"]
+                }
+              ]
+            },
+            {
+              "t": "BulletList",
+              "c": [
+                [
+                  {
+                    "t": "Plain",
+                    "c": [
+                      { "t": "RawInline", "c": ["tex", "\\acf{sdae}"] },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "is" },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "equal" },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "to" },
+                      { "t": "Space" },
+                      { "t": "RawInline", "c": ["tex", "\\acf{sdae}"] }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "t": "Para",
+              "c": [
+                {
+                  "t": "Code",
+                  "c": [["", [], []], "(+*api) is equal to \\acp{api}"]
+                }
+              ]
+            },
+            {
+              "t": "BulletList",
+              "c": [
+                [
+                  {
+                    "t": "Plain",
+                    "c": [
+                      { "t": "RawInline", "c": ["tex", "\\acp{api}"] },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "is" },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "equal" },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "to" },
+                      { "t": "Space" },
+                      { "t": "RawInline", "c": ["tex", "\\acp{api}"] }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "t": "Para",
+              "c": [
+                {
+                  "t": "Code",
+                  "c": [["", [], []], "(+-^api) is equal to \\aclp{api}"]
+                }
+              ]
+            },
+            {
+              "t": "BulletList",
+              "c": [
+                [
+                  {
+                    "t": "Plain",
+                    "c": [
+                      { "t": "RawInline", "c": ["tex", "\\aclp{api}"] },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "is" },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "equal" },
+                      { "t": "Space" },
+                      { "t": "Str", "c": "to" },
+                      { "t": "Space" },
+                      { "t": "RawInline", "c": ["tex", "\\aclp{api}"] }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      },
+      {
+        "t": "Header",
+        "c": [
+          2,
+          ["acronym-inside-headers-cbir", [], []],
+          [
+            { "t": "Str", "c": "Acronym" },
+            { "t": "Space" },
+            { "t": "Str", "c": "Inside" },
+            { "t": "Space" },
+            { "t": "Str", "c": "headers:" },
+            { "t": "Space" },
+            { "t": "RawInline", "c": ["tex", "\\ac{cbir}"] }
+          ]
+        ]
+      },
+      {
+        "t": "Para",
+        "c": [
+          { "t": "Str", "c": "Should" },
+          { "t": "Space" },
+          { "t": "Str", "c": "work" },
+          { "t": "Space" },
+          { "t": "Str", "c": "even" },
+          { "t": "Space" },
+          { "t": "Str", "c": "when" },
+          { "t": "Space" },
+          { "t": "Str", "c": "surrounded" },
+          { "t": "Space" },
+          { "t": "Str", "c": "by" },
+          { "t": "Space" },
+          { "t": "Str", "c": "characters:" },
+          { "t": "Space" },
+          { "t": "Str", "c": "!" },
+          { "t": "RawInline", "c": ["tex", "\\acf{xyz}"] },
+          { "t": "Str", "c": "!" }
+        ]
+      },
+      {
+        "t": "BlockQuote",
+        "c": [
+          {
+            "t": "Para",
+            "c": [
+              { "t": "Str", "c": "Should" },
+              { "t": "Space" },
+              { "t": "Str", "c": "also" },
+              { "t": "Space" },
+              { "t": "Str", "c": "work" },
+              { "t": "Space" },
+              { "t": "Str", "c": "inside" },
+              { "t": "Space" },
+              { "t": "Str", "c": "quotes:" },
+              { "t": "Space" },
+              { "t": "RawInline", "c": ["tex", "\\ac{ooo}"] }
+            ]
+          }
+        ]
+      },
+      {
+        "t": "Para",
+        "c": [
+          { "t": "Str", "c": "Should" },
+          { "t": "Space" },
+          { "t": "Str", "c": "work" },
+          { "t": "Space" },
+          { "t": "Str", "c": "inside" },
+          { "t": "Space" },
+          { "t": "Str", "c": "bullet" },
+          { "t": "Space" },
+          { "t": "Str", "c": "points:" }
+        ]
+      },
+      {
+        "t": "BulletList",
+        "c": [
+          [
+            {
+              "t": "Plain",
+              "c": [{ "t": "RawInline", "c": ["tex", "\\ac{dicom}"] }]
+            }
+          ],
+          [
+            {
+              "t": "Plain",
+              "c": [{ "t": "RawInline", "c": ["tex", "\\ac{nifti}"] }]
+            }
+          ],
+          [
+            {
+              "t": "Plain",
+              "c": [{ "t": "RawInline", "c": ["tex", "\\ac{hl7}"] }]
+            }
+          ]
+        ]
+      },
+      {
+        "t": "Para",
+        "c": [
+          { "t": "Str", "c": "Should" },
+          { "t": "Space" },
+          { "t": "Str", "c": "work" },
+          { "t": "Space" },
+          { "t": "Str", "c": "inside" },
+          { "t": "Space" },
+          { "t": "Str", "c": "enumerations:" }
+        ]
+      },
+      {
+        "t": "OrderedList",
+        "c": [
+          [1, { "t": "Decimal" }, { "t": "Period" }],
+          [
+            [
+              {
+                "t": "Plain",
+                "c": [
+                  { "t": "RawInline", "c": ["tex", "\\acl{sdae}"] },
+                  { "t": "Str", "c": ":" },
+                  { "t": "Space" },
+                  { "t": "Str", "c": "uses" },
+                  { "t": "Space" },
+                  { "t": "Math", "c": [{ "t": "InlineMath" }, "L_1"] },
+                  { "t": "Str", "c": "-norm" }
+                ]
+              }
+            ],
+            [
+              {
+                "t": "Plain",
+                "c": [
+                  { "t": "RawInline", "c": ["tex", "\\acl{vae}"] },
+                  { "t": "Str", "c": ":" },
+                  { "t": "Space" },
+                  { "t": "Str", "c": "uses" },
+                  { "t": "Space" },
+                  { "t": "Str", "c": "KL" },
+                  { "t": "Space" },
+                  { "t": "Str", "c": "divergence" }
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "pandoc-api-version": [1, 17, 5, 4]
+  }
+  
