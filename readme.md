@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Enet4/pandoc-ac.svg?branch=master)](https://travis-ci.org/Enet4/pandoc-ac)
 ![Minimum Rust Version 1.31](https://img.shields.io/badge/Minimum%20Rust%20Version-1.31-yellow.svg)
+![Minimum Pandoc Version 2.2](https://img.shields.io/badge/Minimum%20Pandoc%20Version-2.2-green.svg)
 
 This filter provides a slightly cleaner syntax for LaTeX acronyms.
 
