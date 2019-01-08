@@ -73,7 +73,7 @@ fn process_inlines(inlines: &mut Vec<Inline>) {
     let mut changes: Vec<(usize, Inline, Option<String>, Option<String>)> = Vec::new();
 
     lazy_static! {
-        static ref RE: Regex = Regex::new(r"\(\+(\-|\.|\~|\*|\^)?(\S)+\)").unwrap();
+        static ref RE: Regex = Regex::new(r"\(\+(\-|\.|\~)?(\*|\^)?(\w)+\)").unwrap();
     }
 
     for (offset, inline) in inlines.into_iter().enumerate() {

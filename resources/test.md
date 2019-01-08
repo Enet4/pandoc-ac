@@ -51,3 +51,5 @@ Should work inside enumerations:
 
 1. (+-sdae): uses $L_1$-norm
 2. (+-vae): uses KL divergence
+
+Should also work surrounded by parentheses: ((+^api) (+rest))
