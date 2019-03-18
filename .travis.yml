@@ -2,6 +2,7 @@ language: rust
 sudo: true
 
 rust:
+  - 1.31.1
   - stable
   - beta
   - nightly
