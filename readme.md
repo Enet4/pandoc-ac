@@ -19,6 +19,28 @@ What it does:
 | `(+*x)`, `(+.*x)`, `(+-*x)`, `(+~*x)` | plural form of the above | `\acp{x}`, `\acsp{x}`, `\aclp{x}`, `\acfp{x}` respectively |
 | `(+^x)`, `(+.^x)`, `(+-^x)`, `(+~^x)` | plural form, alternate syntax | `\acp{x}`, `\acsp{x}`, `\aclp{x}`, `\acfp{x}` |
 
+## Using
+
+The binary `pandoc-ac` is a standard [pandoc filter](http://pandoc.org/filters.html).
+
+```none
+pandoc mytext.md -F pandoc-ac -o out.pdf
+```
+
+Moreover, the filter is accessible programmatically from Rust with the `pandoc_ac` library.
+
+```rust
+use pandoc_ast::Pandoc;
+use pandoc_ac::make_acronym_formatting;
+use serde_json::from_reader;
+use std::fs::File;
+
+let input_file = "resources/test.md";
+
+let text_json: Pandoc = from_reader(File::open(input_file)?)?;
+let result: Pandoc = make_acronym_formatting(text_json);
+```
+
 ## License
 
 Licensed under either of
