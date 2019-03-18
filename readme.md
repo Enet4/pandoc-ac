@@ -14,8 +14,8 @@ What it does:
 |---------|---------------------------|---------------------|
 | `(+x)`  | basic acronym instruction | `\ac{x}`  |
 | `(+~x)` | full form of the acronym  | `\acf{x}`  |
-| `(+-x)` | always short form | `\acs{x}`  |
-| `(+x)`  | always expand acronym | `\acs{x}` |
+| `(+.x)` | always short form | `\acs{x}`  |
+| `(+-x)`  | always expand acronym | `\acl{x}` |
 | `(+*x)`, `(+.*x)`, `(+-*x)`, `(+~*x)` | plural form of the above | `\acp{x}`, `\acsp{x}`, `\aclp{x}`, `\acfp{x}` respectively |
 | `(+^x)`, `(+.^x)`, `(+-^x)`, `(+~^x)` | plural form, alternate syntax | `\acp{x}`, `\acsp{x}`, `\aclp{x}`, `\acfp{x}` |
 
