@@ -2,7 +2,7 @@
 
 [![Latest Version](https://img.shields.io/crates/v/pandoc-ac.svg)](https://crates.io/crates/pandoc-ac)
 ![Minimum Rust Version 1.31](https://img.shields.io/badge/Minimum%20Rust%20Version-1.31-green.svg)
-![Minimum Pandoc Version 2.2](https://img.shields.io/badge/Minimum%20Pandoc%20Version-2.2-green.svg)
+![Minimum Pandoc Version 2.13](https://img.shields.io/badge/Minimum%20Pandoc%20Version-2.13-green.svg)
 [![Build Status](https://travis-ci.org/Enet4/pandoc-ac.svg?branch=master)](https://travis-ci.org/Enet4/pandoc-ac)
 [![dependency status](https://deps.rs/repo/github/Enet4/pandoc-ac/status.svg)](https://deps.rs/repo/github/Enet4/pandoc-ac)
 
@@ -22,6 +22,7 @@ What it does:
 ## Using
 
 The binary `pandoc-ac` is a standard [pandoc filter](http://pandoc.org/filters.html).
+It is currently compatible with the Pandoc AST API v1.22.
 
 ```none
 pandoc mytext.md -F pandoc-ac -o out.pdf

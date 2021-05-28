@@ -22,7 +22,7 @@ pub fn test1() {
         let dir = tempdir().unwrap();
         let mdfilepath = dir.path().join("test.md.json");
 
-        pandoc.set_output(OutputKind::File(mdfilepath.display().to_string()));
+        pandoc.set_output(OutputKind::File(mdfilepath.clone()));
         pandoc.execute().unwrap();
         from_reader(File::open(mdfilepath).unwrap()).unwrap()
    };

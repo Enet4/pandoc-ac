@@ -7,8 +7,8 @@ How it works:
 
 - `(+x)`: basic acronym instruction, translates to `\ac{x}`.
 - `(+~x)`: full form of the acronym, translates to `\acf{x}`.
-- `(+-x)`: always short form, traslates to `\acs{x}`.
-- `(+x)`: always expand acronym, traslates to `\acs{x}`.
+- `(+-x)`: always short form, translates to `\acs{x}`.
+- `(+-x)`: always expand acronym, translates to `\acl{x}`.
 - `(+*x)`, `(+.*x)`, `(+-*x)`, `(+~*x)`: plural form of the above, translate to `\acp{x}`, `\acsp{x}`, `\aclp{x}`, `\acfp{x}` respectively.
 - `(+^x)`, `(+.^x)`, `(+-^x)`, `(+~^x)`: plural form, same thing as the previous point
 
@@ -53,3 +53,14 @@ Should work inside enumerations:
 2. (+-vae): uses KL divergence
 
 Should also work surrounded by parentheses: ((+^api) (+rest))
+
+Should also work inside tables:
+
+| Acronym (like (+vga)) | Expanded (like (+-vga)) |
+|-----------------------|-------------------------|
+| (+-cga)               | (+-cga)                 |
+| (+-ega)               | (+-ega)                 |
+| (+-vga)               | (+-vga)                 |
+| (+-svga)              | (+-svga)                |
+
+  : List of video adapter formats, such as (+cga).
