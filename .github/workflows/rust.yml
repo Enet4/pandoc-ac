@@ -15,13 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        rust:
+          - 1.31.1
+          - stable
+          - beta
+        pandoc: 2.13
+        pandoc_url: https://github.com/jgm/pandoc/releases/download/2.13/pandoc-2.13-1-amd64.deb
         include:
-          - pandoc: 2.13
-            pandoc_url: https://github.com/jgm/pandoc/releases/download/2.13/pandoc-2.13-1-amd64.deb
-            rust: 
-              - 1.31.1
-              - stable
-              - beta
           - pandoc: 2.12
             pandoc_url: https://github.com/jgm/pandoc/releases/download/2.12/pandoc-2.12-1-amd64.deb
             rust: stable
