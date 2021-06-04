@@ -20,7 +20,8 @@ jobs:
          - stable
          - beta
         pandoc:
-         - 2.4
+         - 2.12
+         - 2.12
     steps:
     - name: Download and install Pandoc
       run: curl -L https://github.com/jgm/pandoc/releases/download/${{ matrix.pandoc }}/pandoc-${{ matrix.pandoc }}-1-amd64.deb --output pandoc-${{ matrix.pandoc }}-1-amd64.deb && 
