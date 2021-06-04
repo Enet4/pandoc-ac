@@ -11,7 +11,6 @@
 //! [`make_acronym_formatting`] performs the intended translation in Rust.
 //! 
 //! [`make_acronym_formatting`]: fn.make_acronym_formatting.html
-#![warn(rust_2018_idioms)]
 
 use pandoc_ast::{self, Block, Format, Inline, Pandoc};
 use regex::Regex;
@@ -56,12 +55,25 @@ fn process_block(block: &mut Block) {
             }
         }
         // table. you special thing you
-        Block::Table(inlines, _alignment, _relative_col_widths, header_cells, body_cells) => {
-            process_inlines(inlines);
-            Iterator::chain(
-                header_cells.into_iter().flat_map(|i| i),
-                body_cells.into_iter().flat_map(|i| i).flat_map(|i| i),
-            ).for_each(process_block);
+        Block::Table(_attr, (caption_inlines, caption_blocks), _colum_specs, (_head_attr, header_cells), body, (_foot_attr, foot_cells)) => {
+            // caption
+            if let Some(inlines) = caption_inlines {
+                process_inlines(inlines);
+            }
+            caption_blocks.iter_mut().for_each(process_block);
+
+            // header
+            header_cells.into_iter().for_each(process_row);
+
+            // body: pub type TableBody = (Attr, RowHeadColumns, Vec<Row>, Vec<Row>);
+
+            for (_attr, _row_head_columsn, rows, more_rows) in body {
+                rows.iter_mut().for_each(process_row);
+                more_rows.iter_mut().for_each(process_row);
+            }
+
+            // foot
+            foot_cells.into_iter().for_each(process_row);
         }
         // do nothing otherwise
         Block::RawBlock(..) | Block::CodeBlock(..) | Block::HorizontalRule | Block::Null => {}
@@ -148,4 +160,14 @@ fn process_inlines(inlines: &mut Vec<Inline>) {
             offset += 1;
         }
     }
+}
+
+fn process_row(row: &mut pandoc_ast::Row) {
+    let (_, cells) = row;
+    cells.iter_mut().for_each(process_cell);
+}
+
+fn process_cell(cell: &mut pandoc_ast::Cell) {
+    let (_attr, _alignment, _row_span, _col_span, blocks) = cell;
+    blocks.iter_mut().for_each(process_block);
 }

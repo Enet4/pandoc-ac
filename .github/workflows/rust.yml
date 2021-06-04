@@ -16,16 +16,21 @@ jobs:
     strategy:
       matrix:
         rust:
-         - 1.31.1
-         - stable
-         - beta
+          - 1.31.1
+          - stable
+          - beta
         pandoc:
-         - 2.4
+          - 2.13
+        include:
+          - pandoc: 2.13
+            pandoc_url: https://github.com/jgm/pandoc/releases/download/2.13/pandoc-2.13-1-amd64.deb
+          - pandoc: 2.12
+            pandoc_url: https://github.com/jgm/pandoc/releases/download/2.12/pandoc-2.12-1-amd64.deb
+            rust: stable
     steps:
-    - name: Download and install Pandoc
-      run: curl -L https://github.com/jgm/pandoc/releases/download/${{ matrix.pandoc }}/pandoc-${{ matrix.pandoc }}-1-amd64.deb --output pandoc-${{ matrix.pandoc }}-1-amd64.deb && 
-           echo "2d53c645895eacfe4bff572f7ccd5050890248c37be311f3d04819e11dcd97f7  pandoc-${{ matrix.pandoc }}-1-amd64.deb" > pandoc-${{ matrix.pandoc }}-1-amd64.sha256 && 
-           sha256sum --check pandoc-${{ matrix.pandoc }}-1-amd64.sha256 && rm -f pandoc-${{ matrix.pandoc }}-1-amd64.sha256 && sudo dpkg -i pandoc-${{ matrix.pandoc }}-1-amd64.deb
+    - name: Download and install Pandoc ${{ matrix.pandoc }}
+      run: curl -L ${{ matrix.pandoc_url }} --output pandoc-amd64.deb && 
+           sudo dpkg -i pandoc-amd64.deb
     - uses: actions/checkout@v2
     - name: Build
       run: cargo build --verbose
