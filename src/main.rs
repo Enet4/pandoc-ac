@@ -1,10 +1,7 @@
-#![warn(rust_2018_idioms)]
-
-use failure::Error;
 use std::io::{self, Read};
 use pandoc_ac::make_acronym_formatting;
 
-fn main() -> Result<(), Error> {
+fn main() -> std::io::Result<()> {
     let json = {
         let mut stdin = io::stdin();
         let mut json = String::new();
