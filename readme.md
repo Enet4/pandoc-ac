@@ -3,7 +3,7 @@
 [![Latest Version](https://img.shields.io/crates/v/pandoc-ac.svg)](https://crates.io/crates/pandoc-ac)
 ![Minimum Rust Version 1.31](https://img.shields.io/badge/Minimum%20Rust%20Version-1.31-green.svg)
 ![Minimum Pandoc Version 2.13](https://img.shields.io/badge/Minimum%20Pandoc%20Version-2.12-green.svg)
-[![Build Status](https://travis-ci.org/Enet4/pandoc-ac.svg?branch=master)](https://travis-ci.org/Enet4/pandoc-ac)
+[![CI](https://github.com/Enet4/pandoc-ac/actions/workflows/rust.yml/badge.svg)](https://github.com/Enet4/pandoc-ac/actions/workflows/rust.yml)
 [![dependency status](https://deps.rs/repo/github/Enet4/pandoc-ac/status.svg)](https://deps.rs/repo/github/Enet4/pandoc-ac)
 
 This filter provides a slightly cleaner syntax for LaTeX acronyms.
